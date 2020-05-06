@@ -80,7 +80,11 @@ on post-fs-data
     # Create directory for modem_config
     mkdir /data/vendor/modem_config 0570 radio root
 
-    # Create directories for Location services
+    # FPS Info
+    chown system graphics /sys/class/graphics/fb0/measured_fps
+    chmod 0666 /sys/class/graphics/fb0/measured_fps
+
+    #Create directories for Location services
     mkdir /data/vendor/location 0770 gps gps
     mkdir /data/vendor/location/mq 0770 gps gps
     mkdir /dev/socket/location 0770 gps gps
