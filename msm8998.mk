@@ -237,6 +237,9 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.0-impl \
     android.hardware.health@2.0-service
 
+# Hotword enrollment
+$(call inherit-product, vendor/xiaomi/msm8998-common/google/google.mk)
+
 # IMS
 PRODUCT_PACKAGES += \
     ims-ext-common \
