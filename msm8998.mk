@@ -238,6 +238,9 @@ PRODUCT_PACKAGES += \
     android.hidl.manager@1.0 \
     android.hidl.manager@1.0_system
 
+# Hotword enrollment
+$(call inherit-product, vendor/xiaomi/msm8998-common/google/google.mk)
+
 # IMS
 PRODUCT_PACKAGES += \
     ims-ext-common \
