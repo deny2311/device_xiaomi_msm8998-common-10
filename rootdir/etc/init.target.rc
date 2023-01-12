@@ -150,6 +150,12 @@ on boot
     # Load QCACLD WLAN driver
     insmod /vendor/lib/modules/wlan.ko
 
+# smart charging
+    chown system system /sys/class/power_supply/battery/input_suspend
+    chmod 0666 /sys/class/power_supply/battery/input_suspend
+    chmod 0660 /sys/class/power_supply/battery/charging_enabled
+    chown system system /sys/class/power_supply/battery/charging_enabled
+
 on property:sys.boot_completed=1
     # Enable UFS powersaving
     write /sys/devices/soc/1da4000.ufshc/clkscale_enable 1
