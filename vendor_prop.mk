@@ -31,13 +31,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.dirac.speaker=true \
     persist.vendor.audio.fluence.speaker=true \
     persist.vendor.audio.fluence.voicecall=true \
-    persist.vendor.audio.fluence.voicerec=false \
-    persist.vendor.audio.ras.enabled=false \
+    persist.vendor.audio.fluence.voicerec=true \
+    persist.vendor.audio.ras.enabled=true \
     persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxhd-aac \
     ro.config.media_vol_steps=25 \
     ro.config.vc_call_vol_steps=11 \
     ro.vendor.audio.sdk.fluencetype=fluence \
-    ro.vendor.audio.sdk.ssr=false \
+    ro.vendor.audio.sdk.ssr=true \
+    use.voice.path.for.pcm.voip=true \
     vendor.audio.adm.buffering.ms=6 \
     vendor.audio.dolby.ds2.enabled=false \
     vendor.audio.dolby.ds2.hardbypass=false \
@@ -99,7 +100,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.tunnel.encode=false \
     vendor.audio.use.sw.alac.decoder=true \
     vendor.audio.use.sw.ape.decoder=true \
-    vendor.audio_hal.period_size=192
+    vendor.audio_hal.period_size=192 \
+    vendor.audio.hw.aac.encoder=true
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -113,12 +115,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.xm.green.b=0.96 \
     persist.camera.xm.green.r=0.97 \
     persist.vendor.camera.HAL3.enabled=1 \
+    persist.vendor.camera.stats.test=5 \
     persist.vendor.camera.set.afd=4 \
     vidc.enc.dcvs.extra-buff-count=2 \
     camera.shutter_sound.blacklist=com.android.camera \
-    vendor.camera.aux.packagelist=com.android.camera,org.lineageos.snap \
-    vendor.camera.hal1.packagelist=com.tencent.mm,com.eg.android.AlipayGphone,com.android.camera \
-    persist.camera.privapp.list=com.android.camera,com.google.android.GoogleCamera,org.lineageos.snap
+    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.google.android.GoogleCamera,com.android.camera \
+    vendor.camera.hal1.packagelist=com.tencent.mm,com.eg.android.AlipayGphone,com.android.camera,com.whatsapp \
+    persist.camera.privapp.list=com.android.camera,com.google.android.GoogleCamera,org.lineageos.snap,org.codeaurora.snapcam
 
 # CNE
 PRODUCT_PROPERTY_OVERRIDES += \
